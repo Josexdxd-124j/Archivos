@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+h1 {
+  color: #ff6ec7;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.corazon {
+  width: 500px;
+  height: 450px;
+  position: relative;
+  background: red;
+  clip-path: path("M250 75 C300 0, 450 0, 450 125 C450 250, 250 400, 250 400 C250 400, 50 250, 50 125 C50 0, 200 0, 250 75 Z");
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+  margin-bottom: 40px;
+}
+
+.corazon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cuadro-mensaje {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+  color: #333;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.cuadro-mensaje p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Corazones SVG animados */
+.heart {
+  position: absolute;
+  animation: floaty 6s infinite ease-in;
+  bottom: 0;
+  z-index: 1;
+}
+
+.heart svg {
+  width: 20px;
+  height: 20px;
+  fill: pink;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
